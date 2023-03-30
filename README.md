@@ -18,10 +18,12 @@
 
 5- Go to "package.json" file, there is a script named "seed" that must be filled out with the postgres username and database name.
 
-6- To run back-end `npm run live`
+6- To build database run `npm run buildDB`
+
+6- To run back-end run `npm run live`
 
 ## How to install and run front-end
 
 1- Go to News-list/front-end run `npm i` to install all dependencies
 
-2- To run front-end `npm run serve`
+2- To run front-end run `npm run serve`
