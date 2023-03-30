@@ -1,0 +1,36 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "npx tsc ",
+    "live": "nodemon src/index.ts",
+    "dev": "ts-node src/index.ts",
+    "buildDB": "db-migrate up && npm run seed",
+    "rebuildDB": "db-migrate reset && npm run buildDB",
+    "deleteDB": "db-migrate reset",
+    "seed": "psql -U postgres -d news_list -a -f seeders/productsTableSeeder.sql"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/db-migrate-pg": "^0.0.10",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.5",
+    "@types/pg": "^8.6.5",
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pg": "^8.8.0"
+  }
+}
